@@ -11,11 +11,11 @@ public class CoreJavaForSeleniumPage {
 	// Declaration
 	@FindBy(xpath = "//h2[@class='list_title']")
 	private WebElement pageHeader;
-	@FindBy(xpath = "//a[text()='Core Java For Selenium Training']")
+	@FindBy(xpath = "//a[text()=' Core Java For Selenium Trainin']")
 	private WebElement corejavaforseleniumlink;
 
 	// Initialization
-	public void corejavaforseleniumpage(WebDriver driver) {
+	public  CoreJavaForSeleniumPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
 

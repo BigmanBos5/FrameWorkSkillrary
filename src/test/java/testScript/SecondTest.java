@@ -9,22 +9,22 @@ public class SecondTest extends BaseClass {
 
 	@Test
 	public void secondtest() {
-		
-		SoftAssert soft=new SoftAssert();
-		
+
+		SoftAssert soft = new SoftAssert();
+
 		home.ClickGears();
 		home.ClickSkillrarydemoApp();
-		web.childBrowserPopup();
-		
-		skillraryDemo.selectCategory(web, 1);
-		
+		web.handleChildBrowser();
+		soft.assertTrue(skillraryDemo.getPageHeader().isDisplayed());
 
-		//web.dropdown(element, "Testing");
+		skillraryDemo.selectCategory(web, 1);
+		soft.assertEquals(testing.getPageHeader(), "Testing");
+
 		testing.getPageHeader();
-		web.dragAnddrop(testing.getSeleniumImage(), testing.getCartArea());
-		web.scrollTillElement(testing.getFacebookIcon());
+		web.dragAndDropElement(testing.getSeleniumImage(), testing.getCartArea());
+		web.scrollToElement(testing.getFacebookIcon());
 		testing.clickFacebookIcon();
-		
+		soft.assertAll();
 
 	}
 

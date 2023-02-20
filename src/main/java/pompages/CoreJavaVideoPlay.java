@@ -16,20 +16,22 @@ import org.openqa.selenium.support.FindBy;
 		@FindBy(xpath="//h1")
 		private WebElement pageHeader;
 		
-		@FindBy(xpath="//button[@aria-label='play']")
+		//@FindBy(xpath="//button[@aria-label='play']")
+		@FindBy(xpath="//*[@aria-label=\"Play\"]")
 		private WebElement playButton;
 		
-		@FindBy(xpath="//button[@aria-label='pause']")
+		//@FindBy(xpath="//button[@aria-label='pause']")
+		@FindBy(xpath="//*[@aria-label=\"Pause\"]")
 		private WebElement pauseButton;
 		
-		@FindBy(xpath="//span[text()='Add To Wishlist")
+		@FindBy(xpath="//*[text()='Add To Wishlist']")
 		private WebElement addToWishlistTab;
 		
 		@FindBy(xpath = "//*[@class='close_cookies']")
 		private WebElement closeCookiesIcon;
 		
 		//Initialization
-		public void corejavavideopage(WebDriver driver) {
+		public CoreJavaVideoPlay(WebDriver driver) {
 			PageFactory.initElements(driver, this);
 		}
 		
