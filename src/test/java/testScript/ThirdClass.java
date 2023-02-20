@@ -23,7 +23,7 @@ public class ThirdClass extends BaseClass {
 		Thread.sleep(3000);
 		javaVideo.clickpauseButton();
 
-		//web.switchBackFromFrame();
+		web.switchBackFromFrame();
 		javaVideo.clickaddtowishlist();
 		soft.assertAll();
 	}
